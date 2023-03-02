@@ -66,5 +66,8 @@
 
 <div>
     <p> The Graphs obtained from the training are of val_loss and val_accuracy </p>
+    <img src=https://user-images.githubusercontent.com/80937266/222404665-0ae31184-39c6-41d7-91d5-eb0501c2b4e8.png>
+
+    
 </div>
 
