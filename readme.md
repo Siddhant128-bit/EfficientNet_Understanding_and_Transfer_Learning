@@ -5,6 +5,43 @@
     </p>
     <p> The Standard Architecture used for this project was that of Efficient Net B0 the complate architecture of the network can be seen as: </p>
     <img src='https://user-images.githubusercontent.com/80937266/222384110-0097b66e-ab94-4443-a90a-e68146a5f3af.png'>
-
-    <p align='center'> Its a work in progress so is this readme LoL </p>
 </div>
+
+<div>
+    <p> We have initially loaded the model from kersa using the code work as: </p>
+
+    `
+    from keras.applications.efficientnet import EfficientNetB0
+
+    model=EfficientNetB0()
+    `       
+    
+    Also for convinence and training we have freezed 75% of total layers and 25% of the layers have been pretrained ones.
+
+    Model Architecture was built as shown below: 
+    
+    
+    ```       
+    input_val=tf.keras.layers.Input(shape=(224,224,3))
+
+    model=EfficientNetB0(include_top=False,input_tensor=input_val,weights='imagenet')
+
+    for i in range(int(len(model.layers) * 0.75)):
+        model.layers[i].trainable = False
+
+    #model.trainable = False
+
+
+    x = tf.keras.layers.GlobalAveragePooling2D(name="avg_pool")(model.output)
+    x = tf.keras.layers.BatchNormalization()(x)
+
+    top_dropout_rate = 0.2
+    x = tf.keras.layers.Dropout(top_dropout_rate, name="top_dropout")(x)
+    #x=tf.keras.layers.Flatten()
+    output = tf.keras.layers.Dense(len(labels_map), activation="softmax", name="pred")(x)
+
+    model=tf.keras.Model(inputs=input_val,outputs=output)
+    model.compile(
+        optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"]
+    )
+    ````
