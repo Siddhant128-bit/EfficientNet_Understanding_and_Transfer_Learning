@@ -56,3 +56,15 @@
     
 </div>
 
+<div>
+    <p> We have also used the early stopping as the call back that will monitor val loss and restore best weights during the loss between epochs with code as: </p>
+
+    callback = tf.keras.callbacks.EarlyStopping(patience=3, monitor='val_loss',mode='auto',restore_best_weights=True )
+
+    hist=model.fit(X,Y,validation_data=(Xtest,Ytest),epochs=10,callbacks=[callback],batch_size=128)
+</div>
+
+<div>
+    <p> The Graphs obtained from the training are of val_loss and val_accuracy </p>
+</div>
+
