@@ -67,6 +67,12 @@
 <div>
     <p> The Graphs obtained from the training are of val_accuracy  and val_loss</p>
     <img src=https://user-images.githubusercontent.com/80937266/222404665-0ae31184-39c6-41d7-91d5-eb0501c2b4e8.png>
-    Also There might be an issue during model saving for that we recommend to downgrade tensorflow to verison 2.9 or less
+    <p>Also There might be an issue during model saving for that we recommend to downgrade tensorflow to verison 2.9 or less</p>
 </div>
+
+<div>
+    <h4 align='center'> Inference Testing Examples: </h4>
+    <img src=https://user-images.githubusercontent.com/80937266/222406317-4b7195c8-91ae-47e0-907a-c6ba56845d88.png>
+</div>
+
 
