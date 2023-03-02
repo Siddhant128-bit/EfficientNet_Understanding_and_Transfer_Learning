@@ -73,6 +73,8 @@
 <div>
     <h4 align='center'> Inference Testing Examples: </h4>
     <img src=https://user-images.githubusercontent.com/80937266/222406317-4b7195c8-91ae-47e0-907a-c6ba56845d88.png>
+    <img src='https://user-images.githubusercontent.com/80937266/222414066-5f7b8cbd-301b-4912-a789-ecefd229b281.png'>
+
 </div>
 
 
