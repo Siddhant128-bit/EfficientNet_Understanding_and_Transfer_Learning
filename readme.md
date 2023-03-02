@@ -8,6 +8,11 @@
             <li>https://www.kaggle.com/datasets/prasunroy/natural-images </li>
         </ul>
     </p>
+    <p> We also have 2 local files that can be used to test the model's accuracy while inference testing </p>
+    <ul>
+        <li> test_1.jpg => Aeroplate </li>
+        <li> test_2.jpg => Motorbike </li>
+    </ul>
     <p> The Standard Architecture used for this project was that of Efficient Net B0 the complate architecture of the network can be seen as: </p>
     <img src='https://user-images.githubusercontent.com/80937266/222384110-0097b66e-ab94-4443-a90a-e68146a5f3af.png'>
 </div>
@@ -50,6 +55,4 @@
     )
     
 </div>
-
-<div>
 
