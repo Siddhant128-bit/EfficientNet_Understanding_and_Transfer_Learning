@@ -9,17 +9,20 @@
 
 <div>
     <p> We have initially loaded the model from kersa using the code work as: </p>
-
-    `
+    
+    ``
     from keras.applications.efficientnet import EfficientNetB0
 
     model=EfficientNetB0()
-    `      
+    ``
+</div>
+
+<div>      
     <p> Also for convinence and training we have freezed 75% of total layers and 25% of the layers have been pretrained ones.
-        Model Architecture was built as shown below:</p> 
+    Model Architecture was built as shown below: </p>
     
     
-    ```       
+    ``       
     input_val=tf.keras.layers.Input(shape=(224,224,3))
 
     model=EfficientNetB0(include_top=False,input_tensor=input_val,weights='imagenet')
@@ -42,4 +45,5 @@
     model.compile(
         optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"]
     )
-    ````
+    ``
+</div>
